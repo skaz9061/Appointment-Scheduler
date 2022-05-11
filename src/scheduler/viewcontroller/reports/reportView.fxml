@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.viewcontroller.reports.ReportViewController">
+   <children>
+      <TableView fx:id="table" layoutX="22.0" layoutY="70.0" prefHeight="256.0" prefWidth="725.0" />
+      <ButtonBar layoutX="550.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#onExport" text="Export" />
+            <Button mnemonicParsing="false" onAction="#onBack" text="Back" />
+        </buttons>
+      </ButtonBar>
+      <Label alignment="CENTER" layoutX="22.0" layoutY="23.0" prefHeight="23.0" prefWidth="124.0" text="Report">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="reportNameLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="445.0" layoutY="26.0" prefHeight="17.0" prefWidth="302.0" text="Report Name" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+scheduler
+scheduler.dao
+scheduler.model
+scheduler.mysql
+scheduler.util
+scheduler.util.time
+scheduler.viewcontroller.appointments
+scheduler.viewcontroller.customers
+scheduler.viewcontroller.login
+scheduler.viewcontroller.main
+scheduler.viewcontroller.reports

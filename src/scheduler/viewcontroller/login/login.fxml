@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.viewcontroller.login.LoginController">
+   <children>
+      <Label fx:id="titleLable" alignment="CENTER" layoutX="14.0" layoutY="31.0" prefHeight="23.0" prefWidth="134.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" alignment="CENTER_RIGHT" layoutX="26.0" layoutY="108.0" prefHeight="17.0" prefWidth="170.0" text="Username" textAlignment="RIGHT" />
+      <Label fx:id="passwordLabel" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="147.0" prefHeight="17.0" prefWidth="170.0" text="Password" textAlignment="RIGHT" />
+      <TextField fx:id="usernameField" layoutX="214.0" layoutY="104.0" onAction="#login" prefHeight="26.0" prefWidth="219.0" />
+      <PasswordField fx:id="passwordField" layoutX="214.0" layoutY="143.0" onAction="#login" prefHeight="26.0" prefWidth="219.0" />
+      <ButtonBar layoutX="386.0" layoutY="219.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clear" text="Clear" />
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" text="Login" />
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="zoneIdLabel" layoutX="363.0" layoutY="34.0" text="Zone ID:" />
+      <Label fx:id="zoneLabel" layoutX="416.0" layoutY="34.0" prefHeight="17.0" prefWidth="170.0" text="Zone" />
+      <Label fx:id="errorLabel" layoutX="129.0" layoutY="181.0" prefHeight="17.0" prefWidth="304.0" textFill="RED" />
+   </children>
+</AnchorPane>

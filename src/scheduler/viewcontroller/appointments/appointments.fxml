@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="544.0" prefWidth="1072.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scheduler.viewcontroller.appointments.AppointmentsController">
+   <children>
+      <TabPane fx:id="appointmentsTabPane" layoutX="11.0" layoutY="110.0" prefHeight="374.0" prefWidth="1046.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="All Dates">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="227.0" prefWidth="401.0">
+                     <children>
+                        <TableView fx:id="allDatesTable" layoutX="2.0" layoutY="73.0" prefHeight="201.0" prefWidth="1047.0">
+                           <columns>
+                              <TableColumn prefWidth="59.0" text="Appt ID" />
+                              <TableColumn text="Title" />
+                              <TableColumn prefWidth="122.0" text="Description" />
+                              <TableColumn prefWidth="87.0" text="Location" />
+                              <TableColumn prefWidth="124.0" text="Contact" />
+                              <TableColumn prefWidth="75.0" text="Type" />
+                              <TableColumn prefWidth="141.0" text="Start Date / Time" />
+                              <TableColumn prefWidth="147.0" text="End Date / Time" />
+                              <TableColumn minWidth="0.0" prefWidth="53.0" text="Cust. ID" />
+                              <TableColumn minWidth="0.0" prefWidth="155.0" text="Customer Name" />
+                           </columns>
+                        </TableView>
+                        <Label alignment="CENTER" layoutX="389.0" layoutY="33.0" prefHeight="24.0" prefWidth="272.0" style="-fx-border-color: black;" text="Showing Appointments for all Dates" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Monthly">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="227.0" prefWidth="401.0">
+                     <children>
+                        <TableView fx:id="monthlyTable" layoutX="2.0" layoutY="73.0" prefHeight="201.0" prefWidth="1047.0">
+                          <columns>
+                            <TableColumn prefWidth="59.0" text="Appt ID" />
+                            <TableColumn text="Title" />
+                              <TableColumn prefWidth="122.0" text="Description" />
+                              <TableColumn prefWidth="87.0" text="Location" />
+                              <TableColumn prefWidth="124.0" text="Contact" />
+                              <TableColumn prefWidth="75.0" text="Type" />
+                              <TableColumn prefWidth="141.0" text="Start Date / Time" />
+                              <TableColumn prefWidth="147.0" text="End Date / Time" />
+                              <TableColumn minWidth="0.0" prefWidth="53.0" text="Cust. ID" />
+                              <TableColumn minWidth="0.0" prefWidth="155.0" text="Customer Name" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="monthLabel" alignment="CENTER" layoutX="389.0" layoutY="33.0" prefHeight="24.0" prefWidth="272.0" style="-fx-border-color: black;" text="Month" />
+                        <Button fx:id="prevMonthBtn" layoutX="358.0" layoutY="32.0" mnemonicParsing="false" onAction="#prevMonth" text="&lt;" />
+                        <Button fx:id="nextMonthBtn" layoutX="668.0" layoutY="32.0" mnemonicParsing="false" onAction="#nextMonth" text="&gt;" />
+                        <Spinner fx:id="yearChoice" editable="true" layoutX="149.0" layoutY="32.0" onKeyReleased="#checkForNum" prefHeight="26.0" prefWidth="85.0" />
+                        <ChoiceBox fx:id="monthChoice" layoutX="7.0" layoutY="32.0" prefHeight="26.0" prefWidth="134.0" />
+                        <Button layoutX="242.0" layoutY="32.0" mnemonicParsing="false" onAction="#onGoToMonth" text="Go to Month" />
+                        <Button layoutX="801.0" layoutY="32.0" mnemonicParsing="false" onAction="#onGoToTodayMonth" text="Month of Today" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Weekly">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="227.0" prefWidth="401.0">
+                     <children>
+                        <TableView fx:id="weeklyTable" layoutX="2.0" layoutY="73.0" prefHeight="201.0" prefWidth="1047.0">
+                           <columns>
+                              <TableColumn prefWidth="59.0" text="Appt ID" />
+                              <TableColumn text="Title" />
+                              <TableColumn prefWidth="122.0" text="Description" />
+                              <TableColumn prefWidth="87.0" text="Location" />
+                              <TableColumn prefWidth="124.0" text="Contact" />
+                              <TableColumn prefWidth="75.0" text="Type" />
+                              <TableColumn prefWidth="141.0" text="Start Date / Time" />
+                              <TableColumn prefWidth="147.0" text="End Date / Time" />
+                              <TableColumn minWidth="0.0" prefWidth="53.0" text="Cust. ID" />
+                              <TableColumn minWidth="0.0" prefWidth="155.0" text="Customer Name" />
+                           </columns>
+                        </TableView>
+                        <Label fx:id="weekLabel" alignment="CENTER" layoutX="389.0" layoutY="33.0" prefHeight="24.0" prefWidth="272.0" style="-fx-border-color: black;" text="Week" />
+                        <Button fx:id="prevWeekBtn" layoutX="358.0" layoutY="32.0" mnemonicParsing="false" onAction="#prevWeek" text="&lt;" />
+                        <Button fx:id="nextWeekBtn" layoutX="668.0" layoutY="32.0" mnemonicParsing="false" onAction="#nextWeek" text="&gt;" />
+                        <DatePicker layoutX="72.0" layoutY="32.0" onAction="#onGoToWeekOf" />
+                        <Label layoutX="126.0" layoutY="14.0" text="Go to week of:" />
+                        <Button layoutX="803.0" layoutY="32.0" mnemonicParsing="false" onAction="#onGoToTodayWeek" text="Week of Today" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <ComboBox fx:id="accountComboBox" layoutX="684.0" layoutY="76.0" onAction="#onAccountSelect" prefHeight="26.0" prefWidth="343.0" />
+      <Label alignment="CENTER" layoutX="24.0" layoutY="33.0" prefHeight="23.0" prefWidth="124.0" text="Appointments">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="accountLabel" alignment="TOP_RIGHT" layoutX="561.0" layoutY="80.0" prefHeight="17.0" prefWidth="114.0" text="Customer" />
+      <Label layoutX="198.0" layoutY="80.0" text="View:" />
+      <RadioButton fx:id="allRadio" layoutX="251.0" layoutY="80.0" mnemonicParsing="false" onAction="#showAll" text="All" />
+      <RadioButton fx:id="contactRadio" layoutX="389.0" layoutY="80.0" mnemonicParsing="false" onAction="#byContact" text="Contact" />
+      <RadioButton fx:id="customerRadio" layoutX="300.0" layoutY="80.0" mnemonicParsing="false" onAction="#byCustomer" text="Customer" />
+      <ButtonBar layoutX="411.0" layoutY="484.0" prefHeight="40.0" prefWidth="628.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#onAdd" text="Add" />
+            <Button mnemonicParsing="false" onAction="#onEdit" text="Edit" />
+            <Button mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#onGenReport" text="Generate Report" />
+            <Button mnemonicParsing="false" onAction="#goBack" text="Back" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
