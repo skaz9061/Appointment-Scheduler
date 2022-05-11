@@ -1,3 +1,6 @@
+ATTENTION: Database has since been disconnected. A new database will need to be setup for the program to function properly.
+
+
 APPOINTMENT SCHEDULER
 ~~~~~~~~~~~~~~~~~~~~~
 
